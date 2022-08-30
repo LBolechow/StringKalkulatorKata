@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 import java.util.ArrayList;
 
 public class Calculator {
+    a
     public static int add(String liczby) {
         if (liczby.isEmpty()) {
             return 0;
