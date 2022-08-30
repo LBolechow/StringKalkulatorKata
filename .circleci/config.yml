@@ -32,4 +32,9 @@ jobs:
 workflows:
   sample: 
     jobs:
-      - maven/test
+      build-then-test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
