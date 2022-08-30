@@ -11,7 +11,7 @@ public class CalculatorTest
 {
 
     @Test
-    public void shouldReturnNumberWhenSingleNumber() {assertEquals(7,Calculator.add("7"));}
+    public void shouldReturnNumberWhenSingleNumber() {assertEquals(4,Calculator.add("4"));}
     @Test
     public void shouldReturnSumofNumbersWhenTwoNumbers() {assertEquals(26,Calculator.add("18,8"));}
     @Test
