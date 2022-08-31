@@ -13,7 +13,7 @@ public class CalculatorTest
     @Test
     public void shouldReturnNumberWhenSingleNumber() {assertEquals(4,Calculator.add("4"));}
     @Test
-    public void shouldReturnSumofNumbersWhenTwoNumbers() {assertEquals(26,Calculator.add("18,8"));}
+    public void shouldReturnSumofNumbersWhenTwoNumbers() {assertEquals(28,Calculator.add("20,8"));}
     @Test
     public void shouldReturnSumofNumbersWhenMultipleNumbers() {assertEquals(6,Calculator.add("1,2,3"));}
     @Test
