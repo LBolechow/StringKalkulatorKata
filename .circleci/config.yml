@@ -24,7 +24,6 @@ jobs:
       - run: mvn package 
 
       - store_test_results: 
-          path: target/surefire-reports
 
       - store_artifacts: 
-          path: target/StringCalculator-1.0-SNAPSHOT.jar
+          path: target/StringKalkulatorKata-1.0-SNAPSHOT.jar
