@@ -1,9 +1,30 @@
-version: 2.1
+version: 2
+jobs: 
+  build: 
 
-orbs:
-  maven: circleci/maven@1.0.3
+    working_directory: ~/circleci-demo-java-spring 
 
-workflows:
-  maven_test:
-    jobs:
-      - maven/test
+    docker: 
+      - image: circleci/openjdk:11-stretch 
+
+    steps: 
+
+      - checkout 
+
+      - restore_cache: 
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline 
+
+      - save_cache: 
+          paths:
+            - ~/.m2
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+
+      - run: mvn package 
+
+      - store_test_results: 
+          path: target/surefire-reports
+
+      - store_artifacts: 
+          path: target/StringCalculator-1.0-SNAPSHOT.jar
