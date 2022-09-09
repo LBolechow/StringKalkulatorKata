@@ -1,4 +1,4 @@
-package pl.lukbole;
+package pl.lukaszbolechow;
 import java.util.Scanner;
 
 public class ConsoleApp {
