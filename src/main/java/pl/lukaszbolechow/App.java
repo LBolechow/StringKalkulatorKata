@@ -6,8 +6,7 @@ public class App {
     {
         Scanner input = new Scanner(System.in);
         System.out.println("String do dodawania:\n");
-        String liczby = input.nextLine();
-        System.out.println(Calculator.add(liczby));
+        System.out.println(Calculator.add(input.nextLine()));
 
     }
 }
